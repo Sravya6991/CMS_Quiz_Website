@@ -1,6 +1,10 @@
 {
   "name": "cms",
   "version": "0.1.0",
+  "engines": {
+    "npm":"8.12.1" ,
+    "node": "18.4.0"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
