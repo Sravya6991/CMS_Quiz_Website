@@ -1,10 +1,10 @@
 const MongoClient = require('mongodb').MongoClient;
-const mongoURL = "mongodb://127.0.0.1:27017";
+require('dotenv').config();
 
 let database;
 
 async function connectToDb() {
-    const client = await MongoClient.connect(mongoURL); 
+    const client = await MongoClient.connect(process.env.MONGODBURI); 
     database = client.db('cms');
 }
 
