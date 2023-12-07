@@ -22,9 +22,9 @@ const Cloze = () => {
       }
       return item
     })
-    const prevRes = res.join()
+    const prevRes = res.join(' ')
     setPreview(prevRes)
-  },[blank])
+  },[blank]);
 
   const handleText = (e) => {
     setText(e.target.value)
@@ -35,6 +35,7 @@ const Cloze = () => {
     if( result !== '') {
       setBlank([...blank, result])
     }
+    console.log(blank)
   }
 
   const handleSubmit = (e) => {

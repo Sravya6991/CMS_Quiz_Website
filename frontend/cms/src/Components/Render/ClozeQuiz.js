@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react'
 
 const ClozeQuiz = () => {
     const [cloze, setCloze] = useState([]);
-    const noderef = useRef(null);
 
     useEffect(() => {
         fetch('https://cms-quiz-backend.onrender.com/getCloze', { method: 'Get' })
@@ -11,7 +10,7 @@ const ClozeQuiz = () => {
                 setCloze(res.response)
                 console.log(res)
             })
-    });
+    },[]);
 
     function handleDragStart(e) {
         e.dataTransfer.setData('text', e.target.id)

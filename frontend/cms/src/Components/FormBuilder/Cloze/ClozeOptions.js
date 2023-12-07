@@ -10,7 +10,7 @@ const ClozeOptions = ({ blank, setBlank }) => {
 
   return (
     <div>
-      {blank && blank.map((ele, index) => {
+      {blank.map((ele, index) => {
         return (
           <div className='flex justify-evenly'>
             <input type='text' key={index} value={ele} id={index} className='w-full my-2 me-2 p-2 text-black rounded-xl border border-solid' placeholder='Cat1' />

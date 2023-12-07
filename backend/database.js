@@ -1,23 +1,24 @@
-const MongoClient = require('mongodb').MongoClient;
-// const mongourl = "mongodb://127.0.0.1:27017/"
-require('dotenv').config();
+// const { MongoClient } = require('mongodb');
+// // const mongourl = "mongodb://127.0.0.1:27017/"
+// require('dotenv').config();
 
-let database;
+// let database;
 
-async function connectToDb() {
-    const client = await MongoClient.connect(process.env.MONGODBURI); 
-    database = client.db('cms');
-}
+// function connectToDb() {
+//     const client = new MongoClient(`${process.env.MONGODBURI}`); 
+//     database = client.connect()
+// }
 
-function getDb() {
-    if(!database) {
-        throw({message: "database connection not established"});
-    } else {
-        return database;
-    }
-}
+// function getDb() {
+//     if(!database) {
+//         database.close();
+//         throw({message: "database connection not established"});
+//     } else {
+//         return database;
+//     }
+// }
 
-module.exports = {
-    connectToDb: connectToDb,
-    getDb: getDb
-}
+// module.exports = {
+//     connectToDb: connectToDb,
+//     getDb: getDb
+// }
