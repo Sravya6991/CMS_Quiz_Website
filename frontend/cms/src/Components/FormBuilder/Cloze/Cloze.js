@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ClozeOptions from './ClozeOptions';
 import axios from 'axios';
 
-const url = "http://localhost:5000/postCloze";
+const url = "https://cms-quiz-backend.onrender.com/postCloze";
 
 const Cloze = () => {
   const [text, setText] = useState("")

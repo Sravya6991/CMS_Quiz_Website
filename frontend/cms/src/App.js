@@ -3,11 +3,8 @@ import Header from './Components/Header/Header';
 import Categorize from './Components/FormBuilder/Categorize/Categorize';
 import Comprehension from './Components/FormBuilder/Comprehension/Comprehension';
 import Cloze from './Components/FormBuilder/Cloze/Cloze';
-import { useState } from 'react';
 
 function App() {
-  const [form , setForm] = useState([{}]);
-
   const handleForm = (data) => {
     console.log('data from main: ', data)
   }
