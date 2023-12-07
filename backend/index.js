@@ -19,7 +19,7 @@ app.use('/', routes);
 
 db.connectToDb().then((err, client) => {
     if(err) console.log('Error while connecting mongo client');
-    app.listen(5000, (err, render) => {
+    app.listen(process.env.PORT || 5000, (err, render) => {
         if(err) console.log('Error connecting to port');
         console.log("server connected at port: 5000");
     })
