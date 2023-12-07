@@ -26,7 +26,7 @@ export default function Comprehension() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(comprehension)
-        axios.post("http://localhost:5000/comprehension", 
+        axios.post("https://cms-quiz-backend.onrender.com/comprehension", 
         {
             body: comprehension
         }, 

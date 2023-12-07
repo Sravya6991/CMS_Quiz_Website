@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const url = 'http://localhost:5000/getcomprehension'
+const url = 'https://cms-quiz-backend.onrender.com/getcomprehension'
 
 const ComprehensionQuiz = () => {
     const [compre, setCompre] = useState([])

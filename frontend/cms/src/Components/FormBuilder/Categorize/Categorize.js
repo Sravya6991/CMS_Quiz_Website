@@ -32,7 +32,7 @@ const Categorize = () => {
         }
         console.log('newar: ', newArr)
 
-        fetch('http://localhost:5000/postCategory', 
+        fetch('https://cms-quiz-backend.onrender.com/postCategory', 
         {
             method: 'POST',
             body: JSON.stringify(newArr),
