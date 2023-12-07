@@ -4,7 +4,7 @@ const ClozeQuiz = () => {
     const [cloze, setCloze] = useState([]);
 
     useEffect(() => {
-        fetch('https://cms-quiz-backend.onrender.com/getCloze', { method: 'Get' })
+        fetch('https://cms-quiz-backend.onrender.com/getCloze')
             .then(res => res.json())
             .then(res => {
                 setCloze(res.response)
@@ -34,7 +34,7 @@ const ClozeQuiz = () => {
         <div className='container border border-black w-5/6 mx-auto p-3 mb-3'>
             <h1 className='my-2 underline text-violet-600 font-medium text-lg'>Cloze Quiz</h1>
             <div>
-                {cloze.map((item) => {
+                {cloze && cloze.map((item) => {
                     return (
                         <div id='dragzone' className='border border-black p-3 mx-auto my-2'>
                             <p className='my-2'>{item.clozeOptions.map((arr, index) => {

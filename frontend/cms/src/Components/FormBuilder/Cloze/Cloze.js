@@ -31,9 +31,10 @@ const Cloze = () => {
   }
 
   const handleSelect = () => {
-    const result = document.getSelection().toString()
-    if( result !== '') {
-      setBlank([...blank, result])
+    var txt = document.getSelection().toString();
+    console.log(txt)
+    if( txt !== '') {
+      setBlank([...blank, txt])
     }
     console.log(blank)
   }
@@ -78,7 +79,7 @@ const Cloze = () => {
 
       <div className='w-full'>
         <h3>Your question</h3>
-        <input type='text' value={text} id='textElement' onChange={handleText} onSelect={handleSelect} className='w-full mb-5' placeholder='Enter your question' />
+        <input type='text' value={text} id='textElement' onClick={handleSelect} onChange={handleText} className='w-full mb-5' placeholder='Enter your question' />
 
         <ClozeOptions blank={blank} setBlank={setBlank}/>
 
