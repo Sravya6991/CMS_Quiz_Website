@@ -3,7 +3,6 @@ const MongoClient = require('mongodb').MongoClient;
 const dotenv = require('dotenv');
 dotenv.config({path: `${__dirname}/.env`});
 const uri = process.env.MongoDbUri;
-const quizController = require('./Controller/quizController');
 
 var db; 
 
