@@ -6,7 +6,7 @@ const CategoryQuiz = () => {
   const [itemlist, setItemlist] = useState()
 
   useEffect(() => {
-    axios.get('https://cms-quiz-backend.onrender.com/getCategory')
+    axios.get('http://localhost:5000/getCategory')
     .then(res => {
       console.log(res.data.response)
       let result = res.data.response[0]

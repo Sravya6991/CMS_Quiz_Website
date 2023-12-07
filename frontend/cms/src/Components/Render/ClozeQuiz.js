@@ -5,7 +5,7 @@ const ClozeQuiz = () => {
     const noderef = useRef(null);
 
     useEffect(() => {
-        fetch('https://cms-quiz-backend.onrender.com/getCloze', { method: 'Get' })
+        fetch('http://localhost:5000/getCloze', { method: 'Get' })
             .then(res => res.json())
             .then(res => {
                 setCloze(res.response)
